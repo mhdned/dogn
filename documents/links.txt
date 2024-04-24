@@ -1,0 +1,4 @@
+<fastapi>
+https://fastapi.tiangolo.com/
+<pytest>
+https://docs.pytest.org/
