@@ -1,3 +1,4 @@
+from pydantic import EmailStr
 from sqlalchemy.orm import Session
 
 from models import User
@@ -21,5 +22,8 @@ class AuthCRUD:
         self.session.refresh(new_user)
         return new_user
 
-    def find_user_by_email(self, email: str):
+    def find_user_by_email(self, email: EmailStr):
         return self.session.query(User).filter(User.email == email).first()
+
+    def find_user_by_username(self, username: str):
+        return self.session.query(User).filter(User.username == username).first()

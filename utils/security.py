@@ -21,6 +21,13 @@ def hash_password(password: str) -> str:
     return hashed_password
 
 
+def compare_passwords(plain_text_password: str, hashed_password: str) -> bool:
+    # Hash the plain text password using the same method as the stored hashed password
+    hashed_plain_text_password = hash_password(plain_text_password)
+    # Compare the hashed plain text password with the stored hashed password
+    return hashed_plain_text_password == hashed_password
+
+
 def generate_token(payload):
     """
     Generate JWT token with given payload.
