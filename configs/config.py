@@ -14,3 +14,4 @@ else:
     path_environment = os.path.join(current_directory, "configs\envs\.env")
 
 config = dotenv_values(path_environment)
+config["PATH"] = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

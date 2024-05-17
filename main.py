@@ -9,6 +9,7 @@ from configs.config import config
 
 app = FastAPI(title=config["TITLE"])
 
+
 if __name__ == "__main__":
     import uvicorn
 
